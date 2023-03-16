@@ -9,10 +9,11 @@ uses
 type
   TForm3 = class(TForm)
     imgSanta: TImage;
+    Button1: TButton;
     Timer1: TTimer;
+    procedure Button1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure imgSantaClick(Sender: TObject);
-    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,13 +27,6 @@ var
 implementation
 
 {$R *.dfm}
-
-procedure TForm3.FormActivate(Sender: TObject);
-begin
-  imgSanta.Picture.LoadFromFile('.\img\Idle (1).png');
-  Timer1.Enabled := True;
-  frame := 1;
-end;
 
 procedure TForm3.imgSantaClick(Sender: TObject);
 begin
@@ -52,5 +46,11 @@ begin
  imgSanta.Picture.LoadFromFile('.\img\Idle ('+IntToStr(frame)+').png');
 end;
 
+procedure TForm3.Button1Click(Sender: TObject);
+begin
+  imgSanta.Picture.LoadFromFile('.\img\Idle (1).png');
+  Timer1.Enabled := True;
+  frame := 1;
+end;
 
 end.

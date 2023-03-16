@@ -10,6 +10,7 @@ type
   TForm3 = class(TForm)
     imgSanta: TImage;
     Timer1: TTimer;
+    procedure Button1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure imgSantaClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
